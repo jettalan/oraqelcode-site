@@ -159,6 +159,18 @@ a:hover { color: var(--gold-bright); }
   opacity: 0.6;
 }
 
+/* CTA row — App Store + Web App side by side */
+.cta-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.cta-row-stack { flex-direction: column; align-items: center; }
+.cta-row-stack .web-app-btn,
+.cta-row-stack .app-store-btn { min-width: 280px; }
+
 /* App Store button */
 .app-store-btn {
   display: inline-flex;
@@ -185,6 +197,60 @@ a:hover { color: var(--gold-bright); }
 .app-store-btn-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; }
 .app-store-btn-small { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; }
 .app-store-btn-large { font-size: 17px; font-weight: 600; letter-spacing: 0.01em; }
+
+/* Web App button — mirrors the App Store shape but inverted (gold border,
+   transparent fill) so the App Store reads as primary and the Web App
+   reads as secondary. Hover inverts to gold fill / obsidian text, which
+   matches what the App Store button does on hover (gold-bright fill). */
+.web-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px; /* -2px each side to compensate for the 2px border */
+  background: transparent;
+  color: var(--ivory);
+  text-decoration: none;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 30px rgba(201, 169, 97, 0.08);
+}
+.web-app-btn:hover {
+  background: var(--gold-bright);
+  color: var(--obsidian);
+  border-color: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(201, 169, 97, 0.4);
+}
+.web-app-btn:hover svg circle,
+.web-app-btn:hover svg ellipse,
+.web-app-btn:hover svg path { stroke: var(--obsidian); }
+.web-app-btn svg { flex-shrink: 0; transition: stroke 0.3s ease; }
+.web-app-btn-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; }
+.web-app-btn-small { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; }
+.web-app-btn-large { font-size: 17px; font-weight: 600; letter-spacing: 0.01em; }
+
+/* Web App button — primary variant for /coming-soon, where it carries
+   the page on its own (App Store is unavailable there). Filled gold,
+   sized a touch larger. */
+.web-app-btn-primary {
+  background: var(--gold-bright);
+  color: var(--obsidian);
+  border-color: var(--gold-bright);
+  padding: 16px 36px;
+  box-shadow: 0 8px 40px rgba(201, 169, 97, 0.35);
+}
+.web-app-btn-primary:hover {
+  background: var(--ivory);
+  color: var(--obsidian);
+  border-color: var(--ivory);
+}
+.web-app-btn-primary svg circle,
+.web-app-btn-primary svg ellipse,
+.web-app-btn-primary svg path { stroke: var(--obsidian); }
 
 /* Phone mockups */
 .mockups {
@@ -416,6 +482,45 @@ a:hover { color: var(--gold-bright); }
 }
 .closing-quote::after { margin: 20px auto 0; }
 
+/* Coming Soon page bits */
+.coming-note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ivory-dim);
+  margin-top: 32px;
+  line-height: 1.6;
+}
+.coming-meta {
+  margin-top: 40px;
+}
+.coming-meta-link {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.4);
+  padding-bottom: 3px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.coming-meta-link:hover {
+  color: var(--gold-bright);
+  border-bottom-color: var(--gold-bright);
+}
+.coming-back {
+  margin-top: 48px;
+}
+.coming-back-link {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ivory-faint);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.coming-back-link:hover { color: var(--gold); }
+
 /* Footer */
 .footer {
   padding: 60px 40px 40px;
@@ -589,4 +694,9 @@ a:hover { color: var(--gold-bright); }
   .footer-links { gap: 20px; }
   .page { padding: 40px 24px 80px; }
   .features { gap: 48px; }
+  /* Stack the CTA pair on small screens so each button gets its full
+     readable width. */
+  .cta-row { flex-direction: column; align-items: center; gap: 12px; }
+  .cta-row .app-store-btn,
+  .cta-row .web-app-btn { width: 100%; max-width: 320px; }
 }
