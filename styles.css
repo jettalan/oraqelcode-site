@@ -28,7 +28,7 @@ body {
   background: var(--obsidian);
   color: var(--ivory);
   font-family: var(--sans);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -406,7 +406,7 @@ a:hover { color: var(--gold-bright); }
 .section-sub {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 19px;
+  font-size: 18px;
   color: var(--ivory-dim);
   text-align: center;
   max-width: 580px;
@@ -451,7 +451,7 @@ a:hover { color: var(--gold-bright); }
   margin-bottom: 14px;
   color: var(--ivory);
 }
-.feature-text { font-size: 14px; line-height: 1.7; color: var(--ivory-dim); }
+.feature-text { font-size: 18px; line-height: 1.7; color: var(--ivory-dim); }
 
 /* Closing */
 .closing {
@@ -600,7 +600,7 @@ a:hover { color: var(--gold-bright); }
   margin: 0 auto 60px;
   opacity: 0.6;
 }
-.page-content { font-size: 15px; line-height: 1.8; color: var(--ivory-dim); }
+.page-content { font-size: 18px; line-height: 1.8; color: var(--ivory-dim); }
 .page-content p { margin-bottom: 18px; }
 .page-content strong { color: var(--ivory); font-weight: 500; }
 .page-content em { color: var(--ivory); font-style: italic; }
@@ -784,7 +784,7 @@ a:hover { color: var(--gold-bright); }
 .showcase-heading em { font-style: italic; color: var(--gold-bright); font-weight: 300; }
 .showcase-body {
   font-family: var(--serif);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.65;
   color: var(--ivory-dim);
   margin-bottom: 18px;
@@ -798,7 +798,7 @@ a:hover { color: var(--gold-bright); }
   position: relative;
   padding-left: 22px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--ivory-dim);
 }
@@ -1002,7 +1002,7 @@ a:hover { color: var(--gold-bright); }
 .who-heading em { font-style: italic; color: var(--gold-bright); }
 .who-body {
   font-family: var(--serif);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--ivory-dim);
   max-width: 600px;
