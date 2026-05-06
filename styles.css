@@ -700,3 +700,330 @@ a:hover { color: var(--gold-bright); }
   .cta-row .app-store-btn,
   .cta-row .web-app-btn { width: 100%; max-width: 320px; }
 }
+
+/* =========================================================
+   Refresh: nav logomark, trust strip, showcase rows, richer phone
+   mockups (positions list, prose, tribes, clue tabs), who-it's-for
+   strip, footer logomark, and small-feature 3-up.
+   ========================================================= */
+
+.nav-brand { display: inline-flex; align-items: center; gap: 12px; }
+.nav-mark { width: 28px; height: 28px; flex-shrink: 0; }
+
+.footer-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ivory);
+}
+.footer-logomark { width: 22px; height: 22px; flex-shrink: 0; }
+
+/* ── Trust strip — quick four-icon proof row under the hero ───── */
+.trust-strip {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 36px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.12);
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ivory-dim);
+}
+.trust-mark {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+.trust-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  font-weight: 500;
+}
+
+/* ── Showcase rows — alternating copy + phone mockup ──────────── */
+.showcase {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 90px 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.showcase-left .showcase-art { order: 0; }
+.showcase-left .showcase-copy { order: 1; }
+.showcase-right .showcase-art { order: 1; }
+.showcase-right .showcase-copy { order: 0; }
+.showcase-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.showcase-heading {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ivory);
+  margin-bottom: 24px;
+}
+.showcase-heading em { font-style: italic; color: var(--gold-bright); font-weight: 300; }
+.showcase-body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ivory-dim);
+  margin-bottom: 18px;
+}
+.showcase-list {
+  list-style: none;
+  margin-top: 22px;
+  padding: 0;
+}
+.showcase-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ivory-dim);
+}
+.showcase-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 12px;
+}
+.showcase-list strong { color: var(--ivory); font-weight: 500; }
+
+.showcase-art { display: flex; justify-content: center; }
+
+/* ── Larger phone variant for the showcase rows ─────────────── */
+.phone.phone-lg { width: 320px; height: 660px; }
+.phone.phone-lg .phone-screen { padding: 50px 26px; }
+
+/* Position list inside the Code mockup */
+.phone-positions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.phone-pos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid rgba(201, 169, 97, 0.25);
+  border-radius: 10px;
+  background: rgba(201, 169, 97, 0.04);
+}
+.phone-pos-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory-dim);
+}
+.phone-pos-val {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+.phone-pos-master {
+  border-color: rgba(224, 192, 121, 0.65);
+  background: rgba(224, 192, 121, 0.08);
+}
+
+/* Birthright Blessing prose phone */
+.phone-screen-prose {
+  justify-content: flex-start;
+  text-align: left;
+}
+.phone-prose {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ivory);
+  margin-top: 10px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+.phone-prose:first-of-type { margin-top: 24px; }
+.phone-prose-gold { color: var(--gold-bright); font-style: italic; }
+.phone-cta-pill {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+/* Tribes list mockup */
+.tribes-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 18px;
+}
+.tribe-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 38px;
+  gap: 10px;
+  align-items: center;
+  font-family: var(--sans);
+}
+.tribe-name {
+  font-size: 12px;
+  color: var(--ivory);
+  letter-spacing: 0.06em;
+}
+.tribe-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(245, 240, 225, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.tribe-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright));
+  border-radius: 2px;
+}
+.tribe-pct {
+  font-size: 11px;
+  color: var(--gold-bright);
+  font-family: var(--serif);
+  text-align: right;
+}
+.tribe-row-primary .tribe-name { color: var(--gold-bright); font-weight: 500; }
+.tribe-row-primary .tribe-pct { font-size: 13px; }
+.tribe-row-trace { opacity: 0.65; }
+
+/* Scripture clue mockup */
+.clue-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.clue-tab {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(201, 169, 97, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 11px;
+  color: var(--ivory-dim);
+}
+.clue-tab-active {
+  border-color: var(--gold-bright);
+  background: rgba(224, 192, 121, 0.1);
+  color: var(--gold-bright);
+}
+.clue-card {
+  width: 100%;
+  border: 1px solid rgba(201, 169, 97, 0.25);
+  background: rgba(201, 169, 97, 0.04);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+.clue-ref {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.clue-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ivory);
+  text-align: left;
+}
+
+/* ── Section variant — tighter top padding when chained after ── */
+.section.section-tight { padding-top: 60px; padding-bottom: 70px; }
+
+/* Three-up feature row */
+.features.features-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+}
+
+/* ── Who-it's-for strip ───────────────────────────────────────── */
+.who-strip {
+  max-width: var(--max-narrow);
+  margin: 60px auto 0;
+  padding: 80px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 169, 97, 0.15);
+  border-bottom: 1px solid rgba(201, 169, 97, 0.15);
+}
+.who-heading {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3.4vw, 32px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ivory);
+  margin-bottom: 24px;
+}
+.who-heading em { font-style: italic; color: var(--gold-bright); }
+.who-body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ivory-dim);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Responsive — stack showcase rows on mobile ────────────── */
+@media (max-width: 860px) {
+  .showcase {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 70px 24px;
+  }
+  /* Always show the phone art FIRST on mobile so the section reads
+     copy-then-art top-down regardless of left/right desktop order. */
+  .showcase-left .showcase-art,
+  .showcase-right .showcase-art { order: 0; }
+  .showcase-left .showcase-copy,
+  .showcase-right .showcase-copy { order: 1; }
+  .phone.phone-lg { width: 280px; height: 580px; }
+  .phone.phone-lg .phone-screen { padding: 40px 22px; }
+  .who-strip { padding: 60px 24px; }
+  .trust-strip { gap: 24px; padding: 16px 24px 32px; }
+}
