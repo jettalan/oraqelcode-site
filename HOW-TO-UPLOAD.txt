@@ -1,0 +1,82 @@
+OraqelCode-Site — Adding /blessing to the Marketing Repo
+========================================================
+
+WHAT YOU'VE GOT
+---------------
+- blessing.html  (the landing page itself)
+- testimonies/   (62 image files = 31 .png + 31 .webp screenshots)
+
+WHERE TO PUT IT
+---------------
+Both go at the ROOT of the oraqelcode-site repo — same level as
+the existing index.html and styles.css. After upload the repo
+should look like:
+
+  oraqelcode-site/
+  ├── index.html        (the existing homepage)
+  ├── blessing.html     ← NEW, what you upload
+  ├── styles.css        (the existing brand stylesheet)
+  ├── testimonies/      ← NEW, what you upload
+  │   ├── testimony_01.png
+  │   ├── testimony_01.webp
+  │   ├── testimony_02.png
+  │   ├── ...
+  │   └── testimony_31.webp
+  └── (other existing files unchanged)
+
+HOW TO UPLOAD ON GITHUB.COM
+---------------------------
+1. Go to the oraqelcode-site repo on github.com
+2. Click "Add file" → "Upload files"
+3. Drag the blessing.html file AND the whole testimonies folder
+   from this zip into the drop zone
+4. IMPORTANT: At the bottom, choose
+   "Create a new branch for this commit and start a pull request"
+   (NOT "Commit directly to main")
+   - Call the branch:  add-blessing-lp
+5. Click "Propose changes"
+6. On the next page, click "Create pull request"
+
+VIEW IT BEFORE GOING LIVE
+-------------------------
+Once the PR is open, Vercel will post a preview link as a comment
+on the PR within ~1 minute. It will look like:
+
+  https://oraqelcode-site-git-add-blessing-lp-[org].vercel.app/blessing
+
+Open that link. The full landing page should load with the
+testimony wall, brand fonts, and brand colors. CTAs are wired to
+the real oraqelapp.com signup flow.
+
+GO LIVE
+-------
+If the preview looks right, click "Merge pull request" on the PR.
+Vercel will redeploy main within ~1 minute and the page goes live at:
+
+  https://www.oraqelcode.com/blessing
+
+WHAT WAS BUILT
+--------------
+- Uses the existing site's /styles.css (brand fonts + tokens)
+- Page-specific styles inline in blessing.html
+- No top nav (per direct-response LP convention)
+- Footer has wordmark + Support/Privacy/Terms + legal disclaimer
+- All 6 CTAs go to https://oraqelapp.com/signup?next=/paywall&plan=...
+  (signs visitor up, then routes them to the paywall with chosen
+  plan pre-staged for Stripe checkout)
+- 31-tile masonry wall — 3 cols desktop, 2 tablet, 1 mobile
+- WebP-first with PNG fallback (~70% bandwidth savings)
+- First 6 tiles eager-load, rest lazy-load
+
+WHAT'S STILL A PLACEHOLDER
+--------------------------
+- Founder counter shows 349 remaining / 151 claimed / 500 total
+  (hardcoded — needs a backend hook on this repo to go live)
+- The "Listen" button is non-functional (no audio backend on the
+  marketing site — clicking does nothing)
+
+These were live in the original Next.js version because they used
+hooks from the OraqelCode app repo. To make them live here too,
+the marketing repo would need either an API route fetching the
+real numbers, or a small JS file polling the live counter URL.
+That's a follow-up — not blocking for v1.
