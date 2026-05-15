@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oraqel Code — Which Prophet Is Your Life Written Like?</title>
+<meta name="description" content="Every prophet's life followed a pattern. So does yours. Oraqel Code reads the scripture pattern in your name and birth date and reveals the prophetic life that mirrors your own." />
+<meta name="facebook-domain-verification" content="0pi1xk1bg4flp2at2l7x4gpsl33bw2" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C9A961' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23E0C079'/%3E%3C/svg%3E" />
+
+<!-- ============================================================
+     META PIXEL — base code (loaded BEFORE any fbq() calls)
+     Pixel ID: 1800582271301294
+     Tracks PageView automatically. ViewContent + InitiateCheckout
+     are fired manually at the bottom of <body>.
+     ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1800582271301294');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1800582271301294&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel -->
+
+<!-- ============================================================
+     ORAQEL CODE — /archetype LANDING PAGE
+     Archetype Angle · matches the Archetype carousel ad
+     Funnel A (Faithful LDS User) · cold Meta traffic
+     ============================================================ -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  --void:        #0a0410;
+  --aubergine:   #2e1d3d;
+  --aubergine-2: #1a0f26;
+  --plum-card:   #1d1228;
+  --plum-card-2: #241830;
+
+  --gold:        #c9a961;
+  --gold-bright: #e0c079;
+  --gold-deep:   #9a7d4a;
+  --gold-faint:  rgba(201,169,97,0.30);
+
+  --ivory:       #f5f0e1;
+  --ivory-dim:   #cfc6d4;
+  --ivory-mute:  #9b93a3;
+  --blue-dim:    #8fa6c4;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--void);
+  color: var(--ivory);
+  font-family: var(--font-display);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+em { font-style: italic; color: var(--gold-bright); }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+/* ---- shared atmospheric section backgrounds ---- */
+section { position: relative; overflow: hidden; }
+.field {
+  background: radial-gradient(ellipse 75% 55% at 50% 30%,
+              var(--aubergine) 0%, var(--aubergine-2) 45%, var(--void) 100%);
+}
+.field-soft {
+  background: radial-gradient(ellipse 90% 70% at 50% 50%,
+              #211430 0%, #150c20 55%, var(--void) 100%);
+}
+.field-flat { background: var(--void); }
+
+/* ---- shared type ---- */
+.eyebrow {
+  color: var(--gold-deep);
+  font-size: 15px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.glyph { color: var(--gold); font-size: 22px; text-align: center; }
+.hairline {
+  width: 88px; height: 1px;
+  background: var(--gold-faint);
+  margin: 0 auto;
+}
+h1, h2, h3 { font-weight: 500; }
+
+/* ---- CTA — filled gold, rounded corners ---- */
+.cta {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--void);
+  border: 1px solid var(--gold);
+  padding: 13px 34px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.cta:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
+.cta-micro {
+  display: block;
+  color: var(--ivory-mute);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  margin-top: 18px;
+}
+.cta-micro strong { color: var(--gold-bright); font-weight: 400; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 40px;
+  border-bottom: 0.5px solid rgba(201,169,97,0.14);
+  background: var(--void);
+}
+.site-header .brand {
+  color: var(--gold);
+  font-size: 17px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+.site-header .links {
+  color: var(--ivory-mute);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+.site-header .links a { margin-left: 22px; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero { padding: 120px 32px 110px; text-align: center; }
+.hero .bloom {
+  position: absolute;
+  width: 760px; height: 520px;
+  top: 12%; left: 50%; transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(201,169,97,0.10), transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; max-width: 780px; margin: 0 auto; }
+.hero .glyph { margin-bottom: 30px; }
+.hero .eyebrow { margin-bottom: 40px; }
+.hero h1 {
+  color: var(--ivory);
+  font-size: 76px;
+  line-height: 1.16;
+  margin-bottom: 30px;
+}
+.hero h1 .so { color: var(--gold-bright); font-style: italic; }
+.hero p.sub {
+  color: var(--ivory-dim);
+  font-size: 23px;
+  line-height: 1.55;
+  max-width: 600px;
+  margin: 0 auto 44px;
+}
+
+/* ============================================================
+   REFRAME — "this is not a quiz"
+   ============================================================ */
+.reframe { padding: 100px 32px; text-align: center; }
+.reframe .inner { max-width: 680px; margin: 0 auto; }
+.reframe .hairline { margin-bottom: 44px; }
+.reframe h2 {
+  color: var(--ivory);
+  font-size: 50px;
+  line-height: 1.25;
+  margin-bottom: 26px;
+}
+.reframe p {
+  color: var(--ivory-dim);
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   THE ACHE
+   ============================================================ */
+.ache { padding: 110px 32px; text-align: center; }
+.ache .inner { max-width: 640px; margin: 0 auto; }
+.ache .glyph { margin-bottom: 30px; }
+.ache p { color: var(--ivory-dim); font-size: 21px; line-height: 1.62; margin-bottom: 22px; }
+.ache p.q {
+  color: var(--ivory);
+  font-size: 38px;
+  font-style: italic;
+  margin: 8px 0 22px;
+}
+.ache p.q em { color: var(--gold-bright); }
+.ache p.last { color: var(--ivory-mute); font-size: 19px; font-style: italic; }
+
+/* ============================================================
+   THE PROPHETS — card 1 expansion
+   ============================================================ */
+.prophets { padding: 110px 32px; text-align: center; }
+.prophets .head { max-width: 640px; margin: 0 auto 60px; }
+.prophets .eyebrow { margin-bottom: 16px; }
+.prophets h2 { color: var(--ivory); font-size: 52px; line-height: 1.2; }
+.prophet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 880px;
+  margin: 0 auto 50px;
+}
+.prophet {
+  border: 0.5px solid rgba(201,169,97,0.18);
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(36,24,48,0.6), rgba(20,12,31,0.6));
+  padding: 32px 30px;
+  text-align: left;
+}
+.prophet .name {
+  color: var(--gold-bright);
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+.prophet .pattern {
+  color: var(--ivory-dim);
+  font-size: 18px;
+  line-height: 1.55;
+}
+.prophets .close {
+  color: var(--ivory-dim);
+  font-size: 21px;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.prophets .close em { color: var(--gold-bright); }
+
+/* ============================================================
+   PRODUCT SECTIONS — archetype / tribes / blessing
+   ============================================================ */
+.product { padding: 100px 32px; }
+.product .row {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.product .row.reverse { flex-direction: row-reverse; }
+.product .copy { flex: 1; }
+.product .copy .eyebrow { text-align: left; margin-bottom: 16px; }
+.product .copy h2 {
+  color: var(--ivory);
+  font-size: 46px;
+  line-height: 1.22;
+  margin-bottom: 22px;
+}
+.product .copy p {
+  color: var(--ivory-dim);
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.product .device { flex-shrink: 0; }
+
+/* ---- phone frame (carried from the carousel build) ---- */
+.phone {
+  width: 360px; height: 740px;
+  border: 1.5px solid var(--gold-faint);
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(201,169,97,0.05), rgba(10,4,16,0.5));
+  box-shadow: 0 0 90px rgba(201,169,97,0.10), 0 0 40px rgba(46,29,61,0.6) inset;
+  padding: 14px;
+  position: relative;
+}
+.phone::before {
+  content: '';
+  position: absolute;
+  top: 15px; left: 50%; transform: translateX(-50%);
+  width: 46px; height: 4px; border-radius: 4px;
+  background: rgba(201,169,97,0.28);
+}
+.phone-screen {
+  width: 100%; height: 100%;
+  border-radius: 38px;
+  background: radial-gradient(ellipse 120% 80% at 50% 0%, #1a0f26, #0a0410 80%);
+  overflow: hidden;
+  padding: 40px 26px 26px;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+/* in-screen app UI primitives */
+.app-title { color: var(--gold); font-size: 22px; letter-spacing: 0.3em; text-align: center; line-height: 1.5; font-weight: 500; }
+.app-rule { width: 56px; height: 1px; background: var(--gold-faint); margin: 11px 0; }
+.app-sub { color: var(--gold-bright); font-style: italic; font-size: 15px; margin-bottom: 10px; }
+.app-name { color: var(--ivory-dim); font-size: 14px; letter-spacing: 0.04em; margin-bottom: 10px; }
+.app-toggle { display: flex; border: 1px solid var(--gold-faint); border-radius: 999px; overflow: hidden; margin-bottom: 16px; }
+.app-toggle span { font-size: 12px; padding: 7px 16px; color: var(--ivory-mute); }
+.app-toggle span.active { background: linear-gradient(180deg,#2f4364,#233149); color: var(--ivory); }
+.app-card {
+  width: 100%;
+  background: linear-gradient(160deg, var(--plum-card-2), var(--plum-card));
+  border: 1px solid rgba(201,169,97,0.14);
+  border-radius: 16px;
+  padding: 16px 15px;
+  text-align: left;
+}
+.app-label { color: var(--gold-deep); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 7px; }
+.app-label.blue { color: var(--blue-dim); }
+.app-arch-name { color: var(--gold-bright); font-size: 30px; font-weight: 500; margin-bottom: 8px; }
+.app-arch-name.blue { color: var(--blue-dim); }
+.app-body { color: var(--ivory-dim); font-size: 13px; line-height: 1.5; margin-bottom: 8px; }
+.app-cite { color: var(--ivory-mute); font-style: italic; font-size: 11px; margin-bottom: 6px; }
+.app-score { color: var(--ivory-mute); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.app-code { color: var(--gold-bright); font-size: 20px; letter-spacing: 0.22em; margin: 6px 0 3px; }
+.app-lineage { color: var(--gold-bright); font-style: italic; font-size: 14px; }
+
+.tribe-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
+.tribe-name { color: var(--ivory); font-size: 14px; }
+.tribe-name span { color: var(--ivory-mute); font-size: 10px; font-style: italic; }
+.tribe-pct { color: var(--gold-bright); font-size: 13px; }
+.tribe-track { width: 100%; height: 3px; background: rgba(201,169,97,0.12); border-radius: 3px; margin-bottom: 11px; }
+.tribe-fill { height: 100%; background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright)); border-radius: 3px; }
+
+.app-primary {
+  width: 100%; border: 1px solid var(--gold-faint); border-radius: 16px;
+  padding: 18px 15px; text-align: center; margin-bottom: 16px;
+  background: linear-gradient(160deg, var(--plum-card-2), var(--plum-card));
+}
+.app-primary .lab { color: var(--gold-deep); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 7px; }
+.app-primary .big { color: var(--ivory); font-size: 30px; margin-bottom: 4px; }
+.app-primary .sub { color: var(--ivory-dim); font-style: italic; font-size: 13px; margin-bottom: 9px; }
+.app-primary .huge { color: var(--gold-bright); font-size: 42px; font-weight: 500; }
+
+.app-blessing { color: var(--ivory-dim); font-style: italic; font-size: 14px; line-height: 1.6; text-align: left; }
+.app-blessing .drop { color: var(--gold-bright); }
+.app-audio { display: flex; align-items: center; gap: 9px; margin-top: 13px; padding-top: 12px; border-top: 1px solid rgba(201,169,97,0.16); }
+.app-audio .play { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--gold-faint); color: var(--gold); font-size: 10px; display: flex; align-items: center; justify-content: center; }
+.app-audio .track { flex: 1; height: 2px; background: rgba(201,169,97,0.2); position: relative; }
+.app-audio .track::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 32%; background: var(--gold); }
+.app-audio .t { color: var(--ivory-mute); font-size: 11px; }
+
+/* ============================================================
+   FEATURE GRID
+   ============================================================ */
+.features { padding: 100px 32px; text-align: center; }
+.features .head { margin-bottom: 56px; }
+.features .eyebrow { margin-bottom: 16px; }
+.features h2 { color: var(--ivory); font-size: 46px; }
+.feat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.feat {
+  border: 0.5px solid rgba(201,169,97,0.18);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(36,24,48,0.5), rgba(20,12,31,0.5));
+  padding: 26px 26px;
+  text-align: left;
+}
+.feat .fname { color: var(--gold-bright); font-size: 23px; margin-bottom: 7px; }
+.feat .fbody { color: var(--ivory-dim); font-size: 16px; line-height: 1.5; }
+
+/* ============================================================
+   TESTIMONY WALL
+   ============================================================ */
+.testimony { padding: 100px 0 60px; text-align: center; }
+.testimony .head { max-width: 640px; margin: 0 auto 50px; padding: 0 32px; }
+.testimony .eyebrow { margin-bottom: 16px; }
+.testimony h2 { color: var(--ivory); font-size: 48px; line-height: 1.2; }
+.testimony .wall-frame {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.testimony .wall-frame img {
+  width: 100%;
+  display: block;
+}
+.testimony .wall-fade-top {
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 120px;
+  background: linear-gradient(180deg, var(--void) 8%, transparent 100%);
+  pointer-events: none;
+}
+.testimony .wall-fade-bottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0; height: 160px;
+  background: linear-gradient(0deg, var(--void) 8%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   POSITIONING
+   ============================================================ */
+.positioning { padding: 110px 32px; text-align: center; }
+.positioning .inner { max-width: 640px; margin: 0 auto; }
+.positioning .eyebrow { margin-bottom: 16px; }
+.positioning h2 { color: var(--ivory); font-size: 48px; line-height: 1.22; margin-bottom: 26px; }
+.positioning p { color: var(--ivory-dim); font-size: 20px; line-height: 1.62; margin-bottom: 18px; }
+
+/* ============================================================
+   OFFER
+   ============================================================ */
+.offer { padding: 100px 32px; }
+.offer .head { text-align: center; margin-bottom: 56px; }
+.offer .eyebrow { margin-bottom: 16px; }
+.offer h2 { color: var(--ivory); font-size: 50px; }
+.tiers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.tier { padding: 38px 32px; border-radius: 18px; }
+.tier.monthly {
+  border: 0.5px solid rgba(201,169,97,0.25);
+  background: linear-gradient(160deg, rgba(36,24,48,0.5), rgba(20,12,31,0.5));
+}
+.tier.lifetime {
+  border: 1.5px solid var(--gold);
+  background: linear-gradient(160deg, rgba(46,29,61,0.7), rgba(28,21,48,0.7));
+  position: relative;
+}
+.tier .tlabel { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.tier.monthly .tlabel { color: var(--ivory-mute); }
+.tier.lifetime .tlabel { color: var(--gold-bright); }
+.tier .price { color: var(--ivory); font-size: 46px; margin-bottom: 4px; }
+.tier .price .suf { font-size: 17px; color: var(--gold-deep); }
+.tier .year { font-size: 14px; color: var(--gold-deep); margin-bottom: 22px; }
+.tier.lifetime .less { font-size: 15px; color: var(--gold-bright); font-style: italic; margin-bottom: 3px; }
+.tier.lifetime .strike { font-size: 13px; color: var(--gold-deep); text-decoration: line-through; margin-bottom: 22px; }
+.tier .tfeatures { font-size: 16px; line-height: 1.85; margin-bottom: 26px; }
+.tier.monthly .tfeatures { color: var(--ivory-dim); }
+.tier.lifetime .tfeatures { color: var(--ivory); }
+.founder-badge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--gold); color: var(--void);
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 5px 18px; border-radius: 999px; white-space: nowrap; font-weight: 500;
+}
+.tier .cta { width: 100%; text-align: center; padding: 14px; font-size: 15px; }
+.offer-compare {
+  text-align: center; max-width: 540px; margin: 28px auto 0;
+  font-size: 16px; color: var(--ivory-dim); font-style: italic;
+}
+
+/* ---- live counter ---- */
+.live-counter {
+  max-width: 560px;
+  margin: 60px auto 0;
+  padding: 54px 36px 46px;
+  text-align: center;
+  border: 0.5px solid rgba(201,169,97,0.25);
+  border-radius: 20px;
+  background: radial-gradient(ellipse 100% 80% at 50% 0%, #1c1230, var(--void) 85%);
+}
+.live-counter .lc-eyebrow { color: var(--gold-deep); font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; margin-bottom: 8px; }
+.live-counter .lc-subhead { color: var(--ivory-dim); font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: 30px; }
+.live-counter .lc-numerals { display: flex; align-items: baseline; justify-content: center; gap: 8px; margin-bottom: 16px; }
+.live-counter .lc-num { color: var(--ivory); font-size: 100px; line-height: 1; font-weight: 500; }
+.live-counter .lc-suffix { color: var(--ivory-dim); font-size: 34px; font-style: italic; }
+.live-counter .lc-progress { max-width: 360px; margin: 0 auto 12px; height: 1px; background: rgba(201,169,97,0.2); position: relative; }
+.live-counter .lc-fill {
+  position: absolute; left: 0; top: -1px; height: 3px;
+  width: 0;
+  background: var(--gold);
+  transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.live-counter .lc-remaining { color: var(--gold); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 26px; }
+.live-counter .lc-line { max-width: 400px; margin: 0 auto 26px; font-style: italic; color: var(--ivory-dim); font-size: 16px; line-height: 1.6; }
+.live-counter .lc-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.28em; color: var(--gold-deep); text-transform: uppercase; }
+.live-counter .lc-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq { padding: 100px 32px; }
+.faq .inner { max-width: 600px; margin: 0 auto; }
+.faq .eyebrow { margin-bottom: 40px; }
+.faq .q { color: var(--gold-bright); font-size: 22px; margin-bottom: 9px; }
+.faq .a { color: var(--ivory-dim); font-size: 17px; line-height: 1.55; margin-bottom: 30px; }
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.final { padding: 130px 32px; text-align: center; }
+.final .bloom {
+  position: absolute;
+  width: 760px; height: 520px;
+  top: 14%; left: 50%; transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(201,169,97,0.10), transparent 70%);
+  pointer-events: none;
+}
+.final .inner { position: relative; max-width: 680px; margin: 0 auto; }
+.final .glyph { margin-bottom: 26px; }
+.final h2 { color: var(--ivory); font-size: 64px; line-height: 1.22; margin-bottom: 22px; }
+.final h2 em { color: var(--gold-bright); }
+.final p { color: var(--ivory-dim); font-size: 21px; margin-bottom: 40px; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  padding: 36px 32px;
+  border-top: 0.5px solid rgba(201,169,97,0.14);
+  text-align: center;
+  font-size: 13px;
+  color: var(--ivory-mute);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   STICKY MOBILE CTA
+   ============================================================ */
+.sticky-cta {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: var(--void);
+  border-top: 0.5px solid rgba(201,169,97,0.3);
+  z-index: 100;
+}
+.sticky-cta .cta { display: block; width: 100%; text-align: center; padding: 14px; font-size: 14px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 48px; }
+  .hero p.sub { font-size: 19px; }
+  .reframe h2, .prophets h2, .features h2, .positioning h2, .testimony h2, .offer h2 { font-size: 34px; }
+  .ache p.q { font-size: 28px; }
+  .product .row, .product .row.reverse { flex-direction: column; gap: 40px; }
+  .product .copy h2 { font-size: 34px; }
+  .product .copy .eyebrow { text-align: center; }
+  .final h2 { font-size: 40px; }
+  .prophet-grid, .feat-grid, .tiers { grid-template-columns: 1fr; }
+  .phone { width: 300px; height: 616px; }
+  body { padding-bottom: 78px; }
+  .sticky-cta { display: block; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <span class="brand">Oraqel·Code</span>
+  <span class="links">
+    <a href="/support">Support</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero field">
+  <div class="bloom"></div>
+  <div class="hero-inner">
+    <div class="glyph">✦</div>
+    <div class="eyebrow">A Sacred Frequency System</div>
+    <h1>Every prophet's life followed a pattern.<br/><span class="so">So does yours.</span></h1>
+    <p class="sub">Oraqel Code reads the scripture pattern in your name and birth date — and reveals the prophetic life that mirrors your own.</p>
+    <a class="cta" href="https://www.oraqelapp.com/paywall?plan=lifetime">Discover Your Archetype</a>
+    <span class="cta-micro">Lifetime Founder Access — permanently capped at 500 members</span>
+  </div>
+</section>
+
+<!-- ===================== REFRAME ===================== -->
+<section class="reframe field-flat">
+  <div class="inner">
+    <div class="hairline"></div>
+    <h2 style="margin-top:44px;">This is not a quiz.</h2>
+    <p>It's a scripture pattern — drawn from the numbers in your name and birth date, read the way gematria has been studied for centuries. The same pattern that reveals your prophetic archetype also reveals your tribe of Israel, your scripture witnesses, and the blessing written for you.</p>
+  </div>
+</section>
+
+<!-- ===================== THE ACHE ===================== -->
+<section class="ache field-soft">
+  <div class="inner">
+    <div class="glyph">◈</div>
+    <p>There's a question many faithful people carry quietly. Not <em>do I believe</em> — they do. Not <em>am I trying</em> — they are.</p>
+    <p class="q">The question is simpler, and harder:<br/><em>Who am I, really?</em></p>
+    <p>Why does part of me feel unclear? Why do I sense there's something about my life — my calling, my purpose — that I haven't fully uncovered yet?</p>
+    <p class="last">For many, that question never fully resolves. Until they see their life reflected in scripture — in a pattern they didn't choose and couldn't have arranged.</p>
+  </div>
+</section>
+
+<!-- ===================== THE PROPHETS ===================== -->
+<section class="prophets field-flat">
+  <div class="head">
+    <div class="eyebrow">The Prophetic Archetypes</div>
+    <h2>Every prophetic life is a pattern. <em>One of them is yours.</em></h2>
+  </div>
+  <div class="prophet-grid">
+    <div class="prophet">
+      <div class="name">David</div>
+      <div class="pattern">Stood small against a giant. Anointed long before he was crowned — and asked to wait for what was already promised.</div>
+    </div>
+    <div class="prophet">
+      <div class="name">Esther</div>
+      <div class="pattern">Placed in position "for such a time as this." Her courage was quiet, her timing everything.</div>
+    </div>
+    <div class="prophet">
+      <div class="name">Joseph</div>
+      <div class="pattern">Sold by his own, then raised to save them. Betrayal became the very road to his calling.</div>
+    </div>
+    <div class="prophet">
+      <div class="name">Elijah</div>
+      <div class="pattern">Stood alone against false systems. The voice crying in the wilderness, preparing the way for restoration.</div>
+    </div>
+  </div>
+  <p class="close">Oraqel Code reads the scripture pattern in your name and birth date and reveals which prophetic life most closely mirrors your own — <em>with the scripture that roots it.</em></p>
+</section>
+
+<!-- ===================== PRODUCT: ARCHETYPE ===================== -->
+<section class="product field">
+  <div class="row">
+    <div class="copy">
+      <div class="eyebrow">Your Prophetic Archetype</div>
+      <h2>The prophet your life mirrors</h2>
+      <p>Every prophetic life is a pattern — a calling, a trial, a turning point. Oraqel Code reveals which one most closely mirrors yours.</p>
+      <p>Each archetype comes rooted in the scripture references that anchor it, and a resonance score that measures how strongly your pattern aligns. Many users describe this section as unexpectedly accurate — and emotionally validating.</p>
+    </div>
+    <div class="device">
+      <div class="phone"><div class="phone-screen">
+        <div class="app-title">PROPHETIC<br/>ARCHETYPE</div>
+        <div class="app-rule"></div>
+        <div class="app-sub" style="margin-bottom:8px;">Your prophetic and angelic alignment</div>
+        <div class="app-name" style="margin-bottom:9px;">David Leon</div>
+        <div class="app-toggle"><span class="active">Spiritual</span><span>Temporal</span></div>
+        <div class="app-card" style="margin-bottom:11px;">
+          <div class="app-label">Primary Biblical Archetype</div>
+          <div class="app-arch-name">Elijah</div>
+          <div class="app-body">Restorer of spiritual authority and the voice crying in the wilderness. You stand alone against false systems and prepare the way for divine restoration.</div>
+          <div class="app-cite">Malachi 4:5 · 1 Kings 18</div>
+          <div class="app-score">Resonance score · 66</div>
+        </div>
+        <div class="app-card">
+          <div class="app-label blue">Angelic Alignment</div>
+          <div class="app-arch-name blue" style="font-size:24px;">Phanuel</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT: TRIBES ===================== -->
+<section class="product field-flat">
+  <div class="row reverse">
+    <div class="copy">
+      <div class="eyebrow">Tribes of Israel Resonance</div>
+      <h2>The lineage your soul carries</h2>
+      <p>The same pattern reaches deeper. Oraqel Code reveals your resonance across the thirteen tribes of Israel — your primary lineage, and the percentages woven beneath it.</p>
+      <p>Many users say this is the moment the experience stopped feeling like a novelty. Suddenly the chapter was about <em>their</em> line. The promise was always meant for them.</p>
+    </div>
+    <div class="device">
+      <div class="phone"><div class="phone-screen">
+        <div class="app-title">TRIBES OF<br/>ISRAEL</div>
+        <div class="app-rule"></div>
+        <div class="app-sub">Your resonance</div>
+        <div class="app-name">for David Leon</div>
+        <div class="app-primary" style="margin-top:4px;">
+          <div class="lab">Primary Lineage</div>
+          <div class="big">Ephraim</div>
+          <div class="sub">of the house of Joseph</div>
+          <div class="huge">42%</div>
+        </div>
+        <div style="width:100%;">
+          <div class="tribe-row"><span class="tribe-name">Ephraim <span>of Joseph</span></span><span class="tribe-pct">42%</span></div>
+          <div class="tribe-track"><div class="tribe-fill" style="width:42%;"></div></div>
+          <div class="tribe-row"><span class="tribe-name">Benjamin</span><span class="tribe-pct">17%</span></div>
+          <div class="tribe-track"><div class="tribe-fill" style="width:17%;"></div></div>
+          <div class="tribe-row"><span class="tribe-name">Levi</span><span class="tribe-pct">13%</span></div>
+          <div class="tribe-track"><div class="tribe-fill" style="width:13%;"></div></div>
+          <div class="tribe-row"><span class="tribe-name">Judah</span><span class="tribe-pct">12%</span></div>
+          <div class="tribe-track"><div class="tribe-fill" style="width:12%;"></div></div>
+          <div class="tribe-row"><span class="tribe-name">Reuben</span><span class="tribe-pct">8%</span></div>
+          <div class="tribe-track"><div class="tribe-fill" style="width:8%;"></div></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT: BIRTHRIGHT BLESSING ===================== -->
+<section class="product field">
+  <div class="row">
+    <div class="copy">
+      <div class="eyebrow">The Birthright Blessing</div>
+      <h2>A blessing pronounced over you — <em>by name</em></h2>
+      <p>It all converges here. Your archetype, your lineage, your scripture witnesses — woven into a personalized Birthright Blessing, written in the older pattern of Isaac blessing Jacob.</p>
+      <p>Six to eight paragraphs of declared, sealed prose, narrated in a warm storytelling voice. This is the part users save, print, re-read — and cry over.</p>
+    </div>
+    <div class="device">
+      <div class="phone"><div class="phone-screen">
+        <div class="app-title" style="font-size:19px;">BIRTHRIGHT<br/>BLESSING</div>
+        <div class="app-rule"></div>
+        <div class="app-name" style="margin-bottom:4px;">David Leon</div>
+        <div class="app-code">9 · 11 · 3 · 23</div>
+        <div class="app-lineage" style="margin-bottom:15px;">of the lineage of Ephraim</div>
+        <div class="app-card">
+          <div class="app-blessing">
+            <span class="drop">Beloved son of Ephraim,</span> I lay my hands upon your head and bless you with the eyes to see what has been hidden, the ears to hear what has not yet been spoken, and the heart to know that you were called before the foundation of this world was laid…
+          </div>
+          <div class="app-audio">
+            <span class="play">▶</span><span class="track"></span><span class="t">8:42</span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURE GRID ===================== -->
+<section class="features field-soft">
+  <div class="head">
+    <div class="eyebrow">What else is inside</div>
+    <h2>The reading becomes a <em>practice</em></h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat">
+      <div class="fname">Scripture Witnesses</div>
+      <div class="fbody">Curated passages keyed to your code. Verses you've read for years begin speaking directly to you.</div>
+    </div>
+    <div class="feat">
+      <div class="fname">Daily Sacred Scripture</div>
+      <div class="fbody">Personalized guidance and audio I AM affirmations for prayer, walks, and study.</div>
+    </div>
+    <div class="feat">
+      <div class="fname">Decode Another Soul</div>
+      <div class="fbody">Generate readings for a spouse, child, parent, or friend — even deceased loved ones.</div>
+    </div>
+    <div class="feat">
+      <div class="fname">Compatibility Readings</div>
+      <div class="fbody">How two scripture profiles speak to one another — for marriage, family, and friendship.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONY WALL ===================== -->
+<section class="testimony field-flat">
+  <div class="head">
+    <div class="eyebrow">✦ &nbsp; Unprompted &nbsp; ✦</div>
+    <h2>This is what people are saying about <em>Oraqel Code</em></h2>
+  </div>
+  <div class="wall-frame">
+    <div class="wall-fade-top"></div>
+    <img src="/testimony-wall-final.png" alt="What people are saying about Oraqel Code" />
+    <div class="wall-fade-bottom"></div>
+  </div>
+</section>
+
+<!-- ===================== POSITIONING ===================== -->
+<section class="positioning field-soft">
+  <div class="inner">
+    <div class="eyebrow">Positioning</div>
+    <h2>Closer to scripture — <em>not away from it</em></h2>
+    <p>Oraqel Code is not a replacement for revelation, scripture, priesthood authority, prayer, patriarchal blessings, or Jesus Christ.</p>
+    <p>Many users worried about exactly that before they began. What they reported afterward was the opposite: more scripture study, more prayer, more closeness to Christ. Many describe it as complementary to their patriarchal blessing — bringing clarity to things that were once hard to fully understand.</p>
+  </div>
+</section>
+
+<!-- ===================== OFFER ===================== -->
+<section class="offer field">
+  <div class="head">
+    <div class="eyebrow">Choose your access</div>
+    <h2>Two ways to <em>enter the code</em></h2>
+  </div>
+  <div class="tiers">
+    <div class="tier monthly">
+      <div class="tlabel">Monthly</div>
+      <div class="price">$9.99<span class="suf">/mo</span></div>
+      <div class="year">$120 per year</div>
+      <div class="tfeatures">
+        ✦ Your Birthright Blessing<br/>
+        ✦ Prophetic archetype<br/>
+        ✦ Tribal resonance<br/>
+        ✦ Scripture witnesses<br/>
+        ✦ Daily sacred scripture<br/>
+        ✦ Audio I AM affirmations<br/>
+        ✦ Compatibility &amp; Decode features
+      </div>
+      <a class="cta" href="https://www.oraqelapp.com/paywall?plan=monthly">Start Membership</a>
+    </div>
+    <div class="tier lifetime">
+      <div class="founder-badge">Founder · <span data-founder-counter="badge">298</span> left</div>
+      <div class="tlabel">Lifetime</div>
+      <div class="price">$99<span class="suf"> once</span></div>
+      <div class="less">Less than one year of monthly</div>
+      <div class="strike">$120/year recurring</div>
+      <div class="tfeatures">
+        ✦ Everything in monthly<br/>
+        ✦ Lifetime access · all future updates<br/>
+        ✦ Founder-only perks &amp; event access<br/>
+        ✦ Monthly founder giveaways<br/>
+        ✦ Referral blessing rewards<br/>
+        ✦ Permanent founder status<br/>
+        ✦ Capped at 500 members forever
+      </div>
+      <a class="cta" href="https://www.oraqelapp.com/paywall?plan=lifetime">Claim Founder Access</a>
+    </div>
+  </div>
+  <p class="offer-compare">Pay $99 once, or $120 every year. Founders pay less in year one and never again — for life.</p>
+
+  <!-- ---- LIVE COUNTER ---- -->
+  <!-- Real lifetime-member count. Polls /api/lifetime-remaining (our
+       same-origin proxy → www.oraqelapp.com/api/lifetime-remaining)
+       every 60s. data-base is the seed value used until the first
+       poll returns. Current real value is 202; we display 202 until
+       the network confirms.                                          -->
+  <div class="live-counter" id="liveCounter" data-base="202">
+    <div class="lc-eyebrow">Oraqel Code · Lifetime</div>
+    <div class="lc-subhead">Lifetime members claimed</div>
+    <div class="lc-numerals">
+      <span class="lc-num" data-founder-counter="claimed">202</span>
+      <span class="lc-suffix">/500</span>
+    </div>
+    <div class="lc-progress"><div class="lc-fill" id="lcFill"></div></div>
+    <div class="lc-remaining"><span data-founder-counter="remaining-label">298</span> spots remaining</div>
+    <p class="lc-line">Lifetime access is capped at five hundred souls — one Birthright Blessing, every future reading, every future feature, forever.</p>
+    <div class="lc-pill"><span class="dot"></span>Live · updates every 60 seconds</div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq field-flat">
+  <div class="inner">
+    <div class="eyebrow">Questions</div>
+    <div class="q">Is this replacing scripture or revelation?</div>
+    <div class="a">No. It's designed to deepen your relationship with scripture — not replace it. Users consistently report their scripture study, prayer, and closeness to Christ increase.</div>
+    <div class="q">Is this just another personality test?</div>
+    <div class="a">No. It's scripture-centered, identity-focused, and deeply personal — emotionally and spiritually different from any personality system.</div>
+    <div class="q">What if I'm skeptical?</div>
+    <div class="a">Many of the strongest testimonials came from people who doubted it entirely. After reading their Birthright Blessing, they described feeling moved, recognized, and seen.</div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final field">
+  <div class="bloom"></div>
+  <div class="inner">
+    <div class="glyph">✦</div>
+    <h2>You were not made by accident.<br/><em>You were written.</em></h2>
+    <p>Discover which prophet your life mirrors — and the blessing written for you.</p>
+    <a class="cta" href="https://www.oraqelapp.com/paywall?plan=lifetime">Unlock My Oraqel Code</a>
+    <span class="cta-micro">Only <strong data-founder-counter="final">298</strong> founder spots remain</span>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  Oraqel Code is intended as a spiritual reflection and scripture-centered identity experience.<br/>
+  It is not affiliated with or endorsed by The Church of Jesus Christ of Latter-day Saints.
+</footer>
+
+<!-- ===================== STICKY MOBILE CTA ===================== -->
+<div class="sticky-cta">
+  <a class="cta" href="https://www.oraqelapp.com/paywall?plan=lifetime">Discover Your Archetype</a>
+</div>
+
+<!-- ===================== META PIXEL EVENTS ===================== -->
+<script>
+  // PageView already fired in <head> by the base Pixel code.
+  // ViewContent + InitiateCheckout fire here.
+  if (typeof fbq === 'function') { fbq('track', 'ViewContent', { content_name: 'Archetype LP' }); }
+  document.querySelectorAll('a.cta').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (typeof fbq === 'function') {
+        var href = el.getAttribute('href') || '';
+        var isFounder = href.indexOf('plan=lifetime') !== -1;
+        fbq('track', 'InitiateCheckout', {
+          value: isFounder ? 99 : 9.99,
+          currency: 'USD',
+          content_name: isFounder ? 'lifetime' : 'premium_monthly'
+        });
+      }
+    });
+  });
+</script>
+
+<!-- ===================== LIVE FOUNDER COUNTER ===================== -->
+<script>
+/* ============================================================
+   LIVE FOUNDER COUNTER — real number, honest behavior
+   Polls /api/lifetime-remaining (a same-origin Vercel serverless
+   function in this repo that proxies the real counter on
+   www.oraqelapp.com). The proxy is required because the upstream
+   API does not currently set CORS headers, so direct client-side
+   fetch from oraqelcode.com would be blocked by the browser.
+   The shape returned is {"remaining": N, "total": 500, "purchased": M}.
+   ============================================================ */
+(function () {
+  var CAP = 500;
+  var COUNTER_ENDPOINT = '/api/lifetime-remaining';
+  var POLL_MS = 60000;
+
+  var root = document.getElementById('liveCounter');
+  var fill = document.getElementById('lcFill');
+  var base = parseInt(root && root.getAttribute('data-base'), 10) || 202;
+
+  function paint(claimed) {
+    claimed = Math.max(0, Math.min(CAP, claimed));
+    var remaining = CAP - claimed;
+    document.querySelectorAll('[data-founder-counter="claimed"]').forEach(function (el) {
+      el.textContent = claimed;
+    });
+    document.querySelectorAll('[data-founder-counter="remaining-label"],[data-founder-counter="badge"],[data-founder-counter="final"]').forEach(function (el) {
+      el.textContent = remaining;
+    });
+    return claimed;
+  }
+
+  var current = paint(base);
+
+  // --- progress bar animates in on scroll (presentation only) ---
+  var barShown = false;
+  function showBar() {
+    if (barShown || !fill) return;
+    barShown = true;
+    setTimeout(function () {
+      fill.style.width = ((current / CAP) * 100).toFixed(2) + '%';
+    }, 120);
+  }
+  if ('IntersectionObserver' in window && root) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) showBar(); });
+    }, { threshold: 0.4 });
+    io.observe(root);
+  } else {
+    showBar();
+  }
+
+  // --- real polling: keeps the number true ---
+  function tryParse(data) {
+    if (typeof data === 'number') return data;
+    if (data && typeof data === 'object') {
+      // 'purchased' is the upstream API's canonical claimed-count key.
+      // Other keys included for resilience if the shape ever changes.
+      var keys = ['purchased', 'claimed', 'count', 'lifetimeClaimed', 'members', 'value'];
+      for (var i = 0; i < keys.length; i++) {
+        if (typeof data[keys[i]] === 'number') return data[keys[i]];
+      }
+      // If only 'remaining' came back, derive claimed from cap.
+      if (typeof data.remaining === 'number') return CAP - data.remaining;
+    }
+    var n = parseInt(data, 10);
+    return isNaN(n) ? null : n;
+  }
+
+  function poll() {
+    if (!COUNTER_ENDPOINT) return;
+    fetch(COUNTER_ENDPOINT, { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var claimed = tryParse(data);
+        if (claimed != null) {
+          current = paint(claimed);
+          if (barShown && fill) {
+            fill.style.width = ((current / CAP) * 100).toFixed(2) + '%';
+          }
+        }
+      })
+      .catch(function () { /* keep last known real value on failure */ });
+  }
+
+  if (COUNTER_ENDPOINT) {
+    poll();
+    setInterval(poll, POLL_MS);
+  }
+})();
+</script>
+
+</body>
+</html>
