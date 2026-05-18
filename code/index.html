@@ -647,34 +647,31 @@ src="https://www.facebook.com/tr?id=1800582271301294&ev=PageView&noscript=1"
 </script>
 
 <script>
-  // Cross-domain click-ID propagation. When a paid-ad visitor lands
-  // on this page, the platform appends a click ID to the URL
-  // (fbclid for Meta, ttclid for TikTok). The Meta / TikTok pixel
-  // on this page reads it to set _fbp / _ttp cookies, but those
-  // cookies are scoped to oraqelcode.com and won't follow the user
-  // to oraqelapp.com when they click a CTA. To preserve attribution
-  // across the domain handoff, we append the click IDs (and the
-  // _fbp / _ttp cookie values) as URL params on every CTA pointing
-  // at oraqelapp.com. The pixel on oraqelapp.com then reads them
-  // back, stitching the visit to the original ad click. No-op if
-  // no platform IDs are present.
+  // Cross-domain attribution propagation. When a paid-ad visitor
+  // lands here, the platform appends click-ids (fbclid / ttclid /
+  // gclid) and campaign UTMs to the URL; the Meta / TikTok pixels
+  // also set _fbp / _fbc / _ttp cookies. All of that is scoped to
+  // oraqelcode.com and won't follow the user to oraqelapp.com when
+  // they click a CTA. So we append every click-id, every utm_*, and
+  // the pixel cookies as URL params on every CTA pointing at
+  // oraqelapp.com — the app side reads them back and signup persists
+  // them to user_attribution. No-op if nothing is present.
   (function(){
     try {
-      var params = new URLSearchParams(window.location.search);
-      var fbclid = params.get('fbclid');
-      var ttclid = params.get('ttclid');
-      var fbp = (document.cookie.match(/(?:^|; )_fbp=([^;]+)/) || [])[1];
-      var ttp = (document.cookie.match(/(?:^|; )_ttp=([^;]+)/) || [])[1];
-      if (fbp) fbp = decodeURIComponent(fbp);
-      if (ttp) ttp = decodeURIComponent(ttp);
-      if (!fbclid && !ttclid && !fbp && !ttp) return;
+      var sp = new URLSearchParams(window.location.search);
+      var FORWARD = ['fbclid','ttclid','gclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+      var carry = {};
+      var any = false;
+      FORWARD.forEach(function(k){ var v = sp.get(k); if (v) { carry[k] = v; any = true; } });
+      ['_fbp','_fbc','_ttp'].forEach(function(name){
+        var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        if (m) { carry[name] = decodeURIComponent(m[1]); any = true; }
+      });
+      if (!any) return;
       document.querySelectorAll('a[href*="oraqelapp.com"]').forEach(function(a){
         try {
           var u = new URL(a.href);
-          if (fbclid) u.searchParams.set('fbclid', fbclid);
-          if (ttclid) u.searchParams.set('ttclid', ttclid);
-          if (fbp)    u.searchParams.set('_fbp', fbp);
-          if (ttp)    u.searchParams.set('_ttp', ttp);
+          Object.keys(carry).forEach(function(k){ u.searchParams.set(k, carry[k]); });
           a.href = u.toString();
         } catch(e) {}
       });
