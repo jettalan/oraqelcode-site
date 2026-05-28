@@ -992,5 +992,38 @@ h1, h2, h3 { font-weight: 500; }
 })();
 </script>
 
+<script>
+  // Cross-domain attribution propagation. When a paid-ad visitor
+  // lands here, the platform appends click-ids (fbclid / ttclid /
+  // gclid) and campaign UTMs to the URL; the Meta / TikTok pixels
+  // also set _fbp / _fbc / _ttp cookies. All of that is scoped to
+  // oraqelcode.com and won't follow the user to oraqelapp.com when
+  // they click a CTA. So we append every click-id, every utm_*, and
+  // the pixel cookies as URL params on every CTA pointing at
+  // oraqelapp.com — the app side reads them back and signup persists
+  // them to user_attribution. No-op if nothing is present.
+  (function(){
+    try {
+      var sp = new URLSearchParams(window.location.search);
+      var FORWARD = ['fbclid','ttclid','gclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+      var carry = {};
+      var any = false;
+      FORWARD.forEach(function(k){ var v = sp.get(k); if (v) { carry[k] = v; any = true; } });
+      ['_fbp','_fbc','_ttp'].forEach(function(name){
+        var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)'));
+        if (m) { carry[name] = decodeURIComponent(m[1]); any = true; }
+      });
+      if (!any) return;
+      document.querySelectorAll('a[href*="oraqelapp.com"]').forEach(function(a){
+        try {
+          var u = new URL(a.href);
+          Object.keys(carry).forEach(function(k){ u.searchParams.set(k, carry[k]); });
+          a.href = u.toString();
+        } catch(e) {}
+      });
+    } catch(e) {}
+  })();
+</script>
+
 </body>
 </html>
