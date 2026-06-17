@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover the Code Inside You — Oraqel Code</title>
+<meta name="description" content="A Birthright Blessing pronounced over you by name. Generated from scripture-based patterns connected to your name and birth date. Limited to 500 lifetime founders.">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C9A961' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23E0C079'/%3E%3C/svg%3E">
+
+<!-- ============================================================
+     LP-specific styles. Inherits brand tokens from /styles.css:
+       --obsidian, --gold, --gold-bright, --gold-deep, --ivory,
+       --ivory-dim, --serif, --sans
+     This page intentionally has NO top nav (Meta-ad direct-response
+     LP) — brand wordmark + utility links live in the footer.
+     ============================================================ -->
+<style>
+  body { padding-bottom: 80px; }
+  @media (min-width: 640px) { body { padding-bottom: 0; } }
+
+  .lp-section { padding: 64px 20px; position: relative; z-index: 1; }
+  @media (min-width: 640px) { .lp-section { padding: 80px 24px; } }
+  .lp-section--raised { background: var(--obsidian-soft); }
+  .lp-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+  .lp-inner--wide { max-width: 960px; }
+
+  .lp-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .lp-h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.15;
+    color: var(--ivory);
+    margin: 12px 0;
+  }
+  @media (min-width: 640px) { .lp-h1 { font-size: 48px; } }
+  .lp-h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--ivory);
+    line-height: 1.25;
+    margin-bottom: 28px;
+  }
+  @media (min-width: 640px) { .lp-h2 { font-size: 32px; } }
+  .lp-h2--tight { margin-bottom: 20px; }
+  .lp-italic { font-style: italic; color: var(--gold-bright); }
+  .lp-sub {
+    font-size: 17px;
+    color: var(--ivory-dim);
+    margin: 20px auto;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+  .lp-pullquote {
+    margin: 28px auto;
+    max-width: 460px;
+    padding: 16px 24px;
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 14px;
+    background: var(--obsidian-soft);
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ivory);
+    text-align: left;
+  }
+
+  .lp-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 36px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--obsidian);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    transition: background 0.18s ease;
+    margin-top: 24px;
+  }
+  .lp-btn-primary:hover { background: var(--gold-bright); }
+  .lp-btn-secondary {
+    display: block;
+    padding: 14px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold-bright);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.18s ease;
+  }
+  .lp-btn-secondary:hover { background: rgba(201, 169, 97, 0.1); }
+  .lp-cta-meta {
+    font-size: 12px;
+    color: var(--ivory-faint);
+    letter-spacing: 0.02em;
+    margin-top: 16px;
+  }
+  .lp-cta-meta strong { color: var(--gold-bright); font-weight: 400; }
+
+  .lp-divider {
+    height: 1px;
+    margin: 0 32px;
+    background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+    opacity: 0.5;
+  }
+
+  /* AGITATION */
+  .lp-agitation p { color: var(--ivory-dim); font-size: 16px; margin-bottom: 14px; }
+  .lp-agitation .lead { font-size: 19px; color: var(--ivory); font-style: italic; margin-bottom: 18px; }
+  .lp-agitation .questions { font-size: 15px; font-style: italic; color: var(--ivory-faint); margin-top: 18px; }
+
+  /* BLESSING SAMPLE */
+  .lp-blessing-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 28px;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    border-radius: 16px;
+    background: var(--obsidian);
+    text-align: left;
+  }
+  .lp-blessing-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--ivory);
+    margin-bottom: 16px;
+  }
+  .lp-blessing-listen {
+    border-top: 1px solid rgba(201, 169, 97, 0.25);
+    padding-top: 14px;
+    margin-top: 8px;
+  }
+  .lp-listen-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201, 169, 97, 0.12);
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    color: var(--gold-bright);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+  }
+  .lp-sample-note { font-size: 13px; color: var(--ivory-faint); margin-top: 20px; }
+
+  /* FEATURES */
+  .lp-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: left;
+  }
+  @media (min-width: 640px) { .lp-features { grid-template-columns: 1fr 1fr; } }
+  .lp-feature {
+    padding: 24px;
+    border: 1px solid rgba(201, 169, 97, 0.25);
+    border-radius: 16px;
+    background: var(--obsidian);
+  }
+  .lp-feature-glyph { font-size: 20px; color: var(--gold); margin-bottom: 8px; }
+  .lp-feature-title { font-size: 16px; color: var(--ivory); margin-bottom: 4px; }
+  .lp-feature-body { font-size: 13.5px; color: var(--ivory-dim); line-height: 1.55; }
+
+  /* TESTIMONIALS — TEXT CARDS */
+  .lp-quotes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 640px) { .lp-quotes { grid-template-columns: 1fr 1fr; } }
+  .lp-quote {
+    padding: 16px 24px;
+    border-left: 2px solid var(--gold);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: var(--obsidian);
+  }
+  .lp-quote p { font-size: 14.5px; font-style: italic; line-height: 1.6; color: var(--ivory); }
+
+  /* TESTIMONIALS — MASONRY WALL */
+  .lp-wall-heading { text-align: center; margin: 48px 0 24px; }
+  .lp-wall-heading p:first-child { color: var(--gold); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 8px; }
+  .lp-wall-heading p:last-child { color: var(--ivory-dim); font-size: 13.5px; font-style: italic; }
+  .lp-masonry { column-count: 1; column-gap: 16px; }
+  @media (min-width: 640px) { .lp-masonry { column-count: 2; } }
+  @media (min-width: 900px) { .lp-masonry { column-count: 3; } }
+  .lp-tile {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    border: 0.5px solid rgba(201, 169, 97, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--obsidian);
+    display: block;
+  }
+  .lp-tile img { display: block; width: 100%; height: auto; }
+
+  /* TASMANIA */
+  .lp-tasmania {
+    max-width: 560px;
+    margin: 48px auto 0;
+    padding: 32px;
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 18px;
+    background: var(--obsidian);
+    text-align: left;
+  }
+  .lp-tasmania p { font-size: 15px; line-height: 1.75; font-style: italic; color: var(--ivory); margin-bottom: 14px; }
+  .lp-tasmania .attribution { font-size: 12.5px; color: var(--gold-deep); font-style: normal; margin-top: 4px; }
+
+  /* OFFER */
+  .lp-offer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 640px;
+    margin: 36px auto 0;
+  }
+  @media (min-width: 640px) { .lp-offer-grid { grid-template-columns: 1fr 1fr; } }
+  .lp-card {
+    padding: 32px 28px;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    border-radius: 18px;
+    background: var(--obsidian);
+    text-align: left;
+    position: relative;
+  }
+  .lp-card--featured { border: 2px solid var(--gold); }
+  .lp-card-tier { font-size: 12px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--ivory-faint); margin-bottom: 12px; }
+  .lp-card--featured .lp-card-tier { color: var(--gold-bright); }
+  .lp-card-price { font-size: 34px; font-weight: 300; color: var(--ivory); margin-bottom: 4px; }
+  .lp-card-price small { font-size: 14px; color: var(--gold-deep); font-weight: 300; }
+  .lp-card-subprice { font-size: 12px; color: var(--gold-deep); margin-bottom: 20px; }
+  .lp-card-emphasis { font-size: 12px; font-style: italic; color: var(--gold-bright); margin-bottom: 4px; }
+  .lp-card-strike { font-size: 11px; color: var(--gold-deep); text-decoration: line-through; margin-bottom: 20px; }
+  .lp-card-list { list-style: none; padding: 0; margin: 0 0 24px; }
+  .lp-card-list li { font-size: 13.5px; line-height: 1.85; color: var(--ivory-dim); }
+  .lp-card--featured .lp-card-list li { color: var(--ivory); }
+  .lp-card-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--obsidian);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 4px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .lp-card-badge span { font-weight: 400; }
+  .lp-offer-note { max-width: 460px; margin: 24px auto 0; font-size: 13.5px; font-style: italic; color: var(--ivory-dim); text-align: center; }
+
+  /* LIVE COUNTER */
+  .lp-counter {
+    max-width: 560px;
+    margin: 56px auto 0;
+    padding: 48px 32px 44px;
+    border: 1px solid rgba(201, 169, 97, 0.25);
+    border-radius: 18px;
+    background: var(--obsidian);
+    text-align: center;
+  }
+  .lp-counter .label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .lp-counter .label-sub { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ivory-dim); margin-bottom: 32px; }
+  .lp-counter-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .lp-counter-number .big { font-family: var(--serif); font-weight: 300; font-size: 96px; line-height: 1; color: var(--ivory); font-variant-numeric: tabular-nums; }
+  @media (min-width: 640px) { .lp-counter-number .big { font-size: 112px; } }
+  .lp-counter-number .total { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: 32px; line-height: 1; color: var(--ivory-dim); }
+  .lp-counter-bar { position: relative; max-width: 320px; height: 1px; background: rgba(201, 169, 97, 0.2); margin: 0 auto 12px; }
+  .lp-counter-bar-fill { position: absolute; top: -1px; left: 0; height: 3px; background: var(--gold); width: 30.2%; transition: width 0.7s ease-out; }
+  .lp-counter-remaining { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+  .lp-counter-prose { max-width: 400px; margin: 0 auto 28px; font-size: 15px; font-style: italic; line-height: 1.65; color: var(--ivory-dim); }
+  .lp-counter-pulse { display: inline-flex; align-items: center; gap: 8px; font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; }
+  .lp-counter-pulse .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+  /* FAQ */
+  .lp-faq { max-width: 520px; margin: 0 auto; text-align: left; }
+  .lp-faq-q { font-size: 16px; color: var(--gold-bright); margin-bottom: 8px; }
+  .lp-faq-a { font-size: 14.5px; color: var(--ivory-dim); line-height: 1.65; margin-bottom: 28px; }
+
+  /* FOOTER */
+  .lp-footer {
+    border-top: 1px solid rgba(201, 169, 97, 0.2);
+    padding: 40px 24px;
+    text-align: center;
+    background: var(--obsidian);
+  }
+  .lp-footer-mark { color: var(--gold); font-size: 13px; letter-spacing: 0.08em; margin-bottom: 18px; }
+  .lp-footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 22px; font-size: 12px; letter-spacing: 0.08em; }
+  .lp-footer-links a { color: var(--ivory-dim); text-decoration: none; transition: color 0.18s ease; }
+  .lp-footer-links a:hover { color: var(--gold-bright); }
+  .lp-footer-disclaimer { font-size: 11px; line-height: 1.6; color: var(--ivory-faint); max-width: 560px; margin: 0 auto; }
+
+  /* STICKY MOBILE CTA */
+  .lp-sticky-cta {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 50;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: var(--obsidian);
+    border-top: 1px solid rgba(201, 169, 97, 0.3);
+  }
+  @media (min-width: 640px) { .lp-sticky-cta { display: none; } }
+  .lp-sticky-cta a {
+    display: block;
+    text-align: center;
+    background: var(--gold);
+    color: var(--obsidian);
+    padding: 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============== HERO ============== -->
+<section class="lp-section">
+  <div class="lp-inner">
+    <p class="lp-eyebrow">✦&nbsp;&nbsp;A Sacred Frequency System&nbsp;&nbsp;✦</p>
+    <h1 class="lp-h1">
+      What if scripture could reveal<br>
+      <em class="lp-italic">who God says you really are?</em>
+    </h1>
+    <p class="lp-sub">
+      Oraqel Code generates a deeply personal Birthright Blessing using scripture-based patterns connected to your name and birth date — helping faithful believers discover greater clarity, purpose, and identity.
+    </p>
+    <blockquote class="lp-pullquote">
+      &ldquo;It literally brought tears to my eyes. There are things in there that go way beyond. How did you get it so fine tuned?&rdquo;
+    </blockquote>
+    <a href="https://oraqelapp.com/signup?next=%2Fpaywall%3Fplan%3Dlifetime" class="lp-btn-primary">
+      Unlock my Birthright Blessing →
+    </a>
+    <p class="lp-cta-meta">
+      Lifetime Founder Access permanently capped at 500 members ·
+      <strong>349</strong> spots remain
+    </p>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== AGITATION ============== -->
+<section class="lp-section">
+  <div class="lp-inner lp-agitation">
+    <p style="color: var(--gold); font-size: 22px; margin-bottom: 16px;">◈</p>
+    <p class="lead">There are moments in life when the ache inside you becomes impossible to ignore.</p>
+    <p>Not because you've lost your faith. Not because you've stopped praying. Not because you've walked away from God.</p>
+    <p>But because deep down… you still feel like you don't fully know who you are.</p>
+    <p class="questions">Why do I feel spiritually restless? Why does part of me still feel unclear? Why do I feel like there's something important about me I haven't fully uncovered yet?</p>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== BLESSING SAMPLE ============== -->
+<section class="lp-section lp-section--raised">
+  <div class="lp-inner">
+    <p class="lp-eyebrow">The Birthright Blessing</p>
+    <h2 class="lp-h2">A blessing pronounced over you <em class="lp-italic">by name.</em></h2>
+    <div class="lp-blessing-card">
+      <p>Beloved son of Ephraim, I lay my hands upon your head and bless you with the eyes to see what has been hidden, the ears to hear what has not yet been spoken, and the heart to know that you were called before the foundation of this world was laid…</p>
+      <div class="lp-blessing-listen">
+        <span class="lp-listen-btn">▶ Listen</span>
+      </div>
+    </div>
+    <p class="lp-sample-note">Six to eight paragraphs of declared, sealed prose. Narrated in a warm storytelling voice.</p>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== FEATURES ============== -->
+<section class="lp-section">
+  <div class="lp-inner lp-inner--wide">
+    <p class="lp-eyebrow">What you receive</p>
+    <h2 class="lp-h2">Inside <em class="lp-italic">Oraqel Code</em></h2>
+    <div class="lp-features">
+      <div class="lp-feature">
+        <div class="lp-feature-glyph">✦</div>
+        <div class="lp-feature-title">Tribal Resonance</div>
+        <div class="lp-feature-body">Your strongest resonance within the tribes of Israel, scored against thirteen lineages.</div>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-glyph">◈</div>
+        <div class="lp-feature-title">Prophetic Archetype</div>
+        <div class="lp-feature-body">The biblical figure your life most closely mirrors — David, Esther, Joseph, Moses, Daniel, Ruth.</div>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-glyph">☼</div>
+        <div class="lp-feature-title">Scripture Witnesses</div>
+        <div class="lp-feature-body">Nine scripture pulls keyed to your code. Verses you've read for years suddenly speak directly to you.</div>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-glyph">♡</div>
+        <div class="lp-feature-title">Daily Sacred Scripture</div>
+        <div class="lp-feature-body">Personalized guidance and audio I AM affirmations. Listen during prayer, walks, or scripture study.</div>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-glyph">✧</div>
+        <div class="lp-feature-title">Decode Another Soul</div>
+        <div class="lp-feature-body">Generate readings for spouses, children, parents, friends — even deceased loved ones.</div>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-glyph">◇</div>
+        <div class="lp-feature-title">Compatibility Readings</div>
+        <div class="lp-feature-body">How two spiritual profiles interact — for marriage, family, friendship, business partnerships.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="lp-section lp-section--raised">
+  <div class="lp-inner lp-inner--wide">
+    <p class="lp-eyebrow">Testimonials</p>
+    <h2 class="lp-h2">&ldquo;How does this <em class="lp-italic">know me so well?</em>&rdquo;</h2>
+
+    <div class="lp-quotes">
+      <div class="lp-quote"><p>&ldquo;I am amazed at the whole thing. My blessing hit home so many times. I know only God can know me so well.&rdquo;</p></div>
+      <div class="lp-quote"><p>&ldquo;It has renewed my spirit and determination to serve the Lord.&rdquo;</p></div>
+      <div class="lp-quote"><p>&ldquo;God is reminding me of who I am, and why I am here in this time.&rdquo;</p></div>
+      <div class="lp-quote"><p>&ldquo;Ugly cried. And was definitely worth it.&rdquo;</p></div>
+    </div>
+
+    <div class="lp-wall-heading">
+      <p>From the people</p>
+      <p>Real screenshots — last names blurred for privacy.</p>
+    </div>
+    <div class="lp-masonry" id="masonry"></div>
+
+    <div class="lp-tasmania">
+      <p style="color: var(--gold); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 12px;">The Tasmania Testimony</p>
+      <p>&ldquo;I have long felt a restlessness in my soul that I don't fully understand. The insight that the Oraqel Code has provided for me is life changing. I feel more peace, more purpose filled, and less restless. What was vague before now has more clarity.&rdquo;</p>
+      <p>&ldquo;It draws me closer to my Saviour and encourages me to search His word more deeply — and that to me is my measure of truth.&rdquo;</p>
+      <p class="attribution">— A woman from Tasmania who worried Oraqel Code might be priestcraft, then purchased readings for her entire family.</p>
+    </div>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== POSITIONING ============== -->
+<section class="lp-section">
+  <div class="lp-inner">
+    <p class="lp-eyebrow">Positioning</p>
+    <h2 class="lp-h2 lp-h2--tight">Designed to bring you <em class="lp-italic">closer to scripture</em> — not away from it.</h2>
+    <p class="lp-sub">Oraqel Code is not a replacement for revelation, scripture, priesthood authority, prayer, patriarchal blessings, or Jesus Christ. Many users describe it as complementary to their patriarchal blessing — bringing additional clarity to things that once felt difficult to fully understand.</p>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== OFFER ============== -->
+<section class="lp-section lp-section--raised" id="offer">
+  <div class="lp-inner lp-inner--wide">
+    <p class="lp-eyebrow">Choose your access</p>
+    <h2 class="lp-h2">Two ways to <em class="lp-italic">enter the code.</em></h2>
+
+    <div class="lp-offer-grid">
+      <!-- Monthly -->
+      <div class="lp-card">
+        <div class="lp-card-tier">Monthly</div>
+        <div class="lp-card-price">$9.99<small> /mo</small></div>
+        <div class="lp-card-subprice">$120 per year</div>
+        <ul class="lp-card-list">
+          <li>✦ Personalized Birthright Blessing</li>
+          <li>✦ Tribal resonance profile</li>
+          <li>✦ Prophetic archetype</li>
+          <li>✦ Scripture witnesses</li>
+          <li>✦ Daily sacred scripture</li>
+          <li>✦ Audio I AM affirmations</li>
+          <li>✦ Compatibility &amp; Decode features</li>
+        </ul>
+        <a href="https://oraqelapp.com/signup?next=%2Fpaywall%3Fplan%3Dmonthly" class="lp-btn-secondary">Start membership</a>
+      </div>
+
+      <!-- Lifetime Founder -->
+      <div class="lp-card lp-card--featured">
+        <div class="lp-card-badge">Founder · <span>349</span> left</div>
+        <div class="lp-card-tier">Lifetime</div>
+        <div class="lp-card-price">$99<small> once</small></div>
+        <div class="lp-card-emphasis">Less than one year of monthly</div>
+        <div class="lp-card-strike">$120/year recurring</div>
+        <ul class="lp-card-list">
+          <li>✦ Everything in monthly</li>
+          <li>✦ Lifetime access · all future updates</li>
+          <li>✦ Founder-only perks &amp; event access</li>
+          <li>✦ Monthly founder giveaways</li>
+          <li>✦ Referral blessing rewards</li>
+          <li>✦ Permanent founder status</li>
+          <li>✦ Capped at 500 members forever</li>
+        </ul>
+        <a href="https://oraqelapp.com/signup?next=%2Fpaywall%3Fplan%3Dlifetime" class="lp-btn-primary" style="margin: 0; width: 100%; justify-content: center;">Claim founder access</a>
+      </div>
+    </div>
+
+    <p class="lp-offer-note">Pay $99 once, or $120 every year. Founders pay less in year one and never again — for life.</p>
+
+    <!-- Counter -->
+    <div class="lp-counter">
+      <p class="label">Oraqel Code · Lifetime</p>
+      <p class="label-sub">Lifetime members claimed</p>
+      <div class="lp-counter-number">
+        <span class="big">151</span>
+        <span class="total">/500</span>
+      </div>
+      <div class="lp-counter-bar"><div class="lp-counter-bar-fill"></div></div>
+      <p class="lp-counter-remaining">349 spots remaining</p>
+      <p class="lp-counter-prose">Lifetime access is capped at five hundred souls — one Birthright Blessing, every future reading, every future feature, forever.</p>
+      <p class="lp-counter-pulse"><span class="dot"></span>Live · updates every 60 seconds</p>
+      <a href="https://oraqelapp.com/signup?next=%2Fpaywall%3Fplan%3Dlifetime" class="lp-btn-primary" style="margin-top: 0;">Claim a spot →</a>
+    </div>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== FAQ ============== -->
+<section class="lp-section">
+  <div class="lp-inner">
+    <p class="lp-eyebrow" style="text-align: center;">Questions</p>
+    <div class="lp-faq" style="margin-top: 28px;">
+      <p class="lp-faq-q">Is this replacing scripture or revelation?</p>
+      <p class="lp-faq-a">No. Oraqel Code is designed to deepen your relationship with scripture — not replace it. Many users say their scripture study, prayer, and closeness to Christ all increase.</p>
+
+      <p class="lp-faq-q">Is this just another personality test?</p>
+      <p class="lp-faq-a">No. The experience is deeply scripture-centered, identity-focused, and highly personal — emotionally and spiritually different from traditional personality systems.</p>
+
+      <p class="lp-faq-q">What if I'm skeptical?</p>
+      <p class="lp-faq-a">Many of the strongest testimonials came from people who originally doubted the experience entirely. After reading their Birthright Blessing, they described feeling deeply emotional, spiritually moved, or profoundly recognized.</p>
+    </div>
+  </div>
+</section>
+
+<div class="lp-divider"></div>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="lp-section lp-section--raised">
+  <div class="lp-inner">
+    <p style="color: var(--gold); font-size: 22px; margin-bottom: 20px;">✦&nbsp;&nbsp;◈&nbsp;&nbsp;✦</p>
+    <h2 class="lp-h2">What if this is the <em class="lp-italic">clarity</em><br>you've been searching for?</h2>
+    <p class="lp-sub" style="font-style: italic; color: var(--ivory-faint);">Imagine opening your Birthright Blessing tonight. And for the first time in years… feeling like something inside you finally makes sense.</p>
+    <a href="https://oraqelapp.com/signup?next=%2Fpaywall%3Fplan%3Dlifetime" class="lp-btn-primary">Unlock my Oraqel Code →</a>
+    <p class="lp-cta-meta">Only <strong>349</strong> founder spots remain</p>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="lp-footer">
+  <div class="lp-footer-mark">Oraqel · Code</div>
+  <nav class="lp-footer-links">
+    <a href="/support">Support</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </nav>
+  <p class="lp-footer-disclaimer">
+    Oraqel Code is intended as a spiritual reflection and scripture-centered identity experience.<br>
+    It is not affiliated with or endorsed by The Church of Jesus Christ of Latter-day Saints.
+  </p>
+</footer>
+
+<!-- ============== STICKY MOBILE CTA ============== -->
+<div class="lp-sticky-cta">
+  <a href="https://oraqelapp.com/signup?next=%2Fpaywall%3Fplan%3Dlifetime">
+    Claim Lifetime Founder · $99
+  </a>
+</div>
+
+<script>
+  // Build the 31-tile masonry wall. PNG with WebP fallback for ~70%
+  // bandwidth savings on supporting browsers. First 6 eager-load
+  // because they're above the fold on most desktop viewports.
+  const m = document.getElementById('masonry');
+  for (let i = 1; i <= 31; i++) {
+    const n = String(i).padStart(2, '0');
+    const tile = document.createElement('div');
+    tile.className = 'lp-tile';
+    tile.innerHTML = `
+      <picture>
+        <source srcset="/testimonies/testimony_${n}.webp" type="image/webp">
+        <img loading="${i <= 6 ? 'eager' : 'lazy'}"
+             src="/testimonies/testimony_${n}.png"
+             alt="Testimony ${i}">
+      </picture>`;
+    m.appendChild(tile);
+  }
+</script>
+
+</body>
+</html>
